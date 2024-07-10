@@ -1,4 +1,3 @@
 package de.dqmme.ktoraccountsystem.dataclass.exception
 
-class DatabaseException {
-}
+class DatabaseException(message: String) : Exception(message)

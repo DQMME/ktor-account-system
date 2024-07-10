@@ -1,4 +1,9 @@
 package de.dqmme.ktoraccountsystem.dataclass
 
-interface UserDocument {
+import io.ktor.server.auth.Principal
+
+interface UserDocument : Principal {
+    val userId: Int
+    val username: String
+    val hashedPassword: String
 }
