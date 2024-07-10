@@ -27,7 +27,7 @@ class Database<T : UserDocument>(
     suspend fun getUserById(userId: Int): T? {
         if (userCollection == null) throw DatabaseException("User Collection is not provided.")
 
-        return userCollection.findOne("{ _id: \"$userId\" }")
+        return userCollection.findOne("{ _id: $userId }")
     }
 
     suspend fun getUserByUsername(username: String): T? {
