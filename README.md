@@ -78,5 +78,6 @@ Thanks to those people/projects for making this library possible:
 
 ## Todo
 - Publish to jitpack (or mavencentral but ig that's not coming)
+- Documentation
 - Support third party OAuth
 - Implement OAuth scopes properly
