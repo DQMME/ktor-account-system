@@ -1,4 +1,4 @@
-## Ktor Account System
+# Ktor Account System
 
 This is a small account system for ktor which does simple account handling logic for you
 
@@ -7,7 +7,7 @@ This is a small account system for ktor which does simple account handling logic
 * **OAuth2 Support:** OAuth authorization code flow to allow access to third party apps
 * **Password Management:** Secure password hashing and verification using Bcrypt
 
-### Usage
+## Usage
 
 1. **Installation:**
 
@@ -69,14 +69,14 @@ embeddedServer(...) {
 4. **Example:**
     There is a full example with very basic implementation located at `src/main/kotlin/example/FullExample.kt`
 
-### Credits
+## Credits
 Thanks to those people/projects for making this library possible:
 - [Ktor](https://github.com/ktorio/ktor)
 - [KMongo](https://github.com/Litote/kmongo)
 - [kotlinx-datetime](https://github.com/Kotlin/kotlinx-datetime)
 - [Bcrypt - patrickfav](https://github.com/patrickfav/bcrypt)
 
-### Todo
+## Todo
 - Publish to jitpack (or mavencentral but ig that's not coming)
 - Support third party OAuth
 - Implement OAuth scopes properly
