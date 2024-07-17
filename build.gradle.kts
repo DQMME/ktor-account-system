@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "de.dqmme"
-version = "1.1.1"
+version = "1.0"
 
 repositories {
     mavenCentral()
