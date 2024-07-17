@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "de.dqmme"
-version = "1.1"
+version = "1.1.1"
 
 repositories {
     mavenCentral()
@@ -39,9 +39,9 @@ publishing {
         create<MavenPublication>("maven") {
             from(components["java"])
 
-            groupId = "com.github.dqmme"
+            groupId = "de.dqmme"
             artifactId = "ktor-account-system"
-            version = "1.1"
+            version = "1.1.1"
 
             pom {
                 name.set("Ktor Account System")
