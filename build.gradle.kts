@@ -6,7 +6,7 @@ val bcryptVersion: String by project
 plugins {
     kotlin("jvm") version "2.0.0"
     id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
-    id("maven-publish")
+    `maven-publish`
 }
 
 group = "de.dqmme"
@@ -42,6 +42,10 @@ tasks {
 
         options.release.set(javaVersion)
     }
+    
+    compileKotlin {
+        kotlinOptions.jvmTarget = javaVersion.toString()
+    }
 }
 
 java {
@@ -55,24 +59,11 @@ kotlin {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            from(components["java"])
-
             groupId = "de.dqmme"
             artifactId = "ktor-account-system"
             version = "1.0"
 
-            pom {
-                name.set("Ktor Account System")
-                description.set("Small Ktor Account System")
-                url.set("https://github.com/dqmme/ktor-account-system")
-                developers {
-                    developer {
-                        id.set("dqmme")
-                        name.set("Dominic H")
-                        email.set("business@dqmme.de")
-                    }
-                }
-            }
+            from(components["java"])
         }
     }
 }
