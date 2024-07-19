@@ -34,7 +34,7 @@ dependencies {
     implementation("at.favre.lib:bcrypt:$bcryptVersion")
 }
 
-val javaVersion = 16
+val javaVersion = 17
 
 tasks {
     compileJava {
