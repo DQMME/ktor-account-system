@@ -34,6 +34,24 @@ dependencies {
     implementation("at.favre.lib:bcrypt:$bcryptVersion")
 }
 
+val javaVersion = 16
+
+tasks {
+    compileJava {
+        options.encoding = Charsets.UTF_8.name()
+
+        options.release.set(javaVersion)
+    }
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(javaVersion))
+}
+
+kotlin {
+    jvmToolchain(javaVersion)
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
@@ -41,7 +59,7 @@ publishing {
 
             groupId = "de.dqmme"
             artifactId = "ktor-account-system"
-            version = "1.1.1"
+            version = "1.0"
 
             pom {
                 name.set("Ktor Account System")
