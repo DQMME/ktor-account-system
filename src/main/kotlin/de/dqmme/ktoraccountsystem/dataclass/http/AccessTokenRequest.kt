@@ -10,5 +10,6 @@ data class AccessTokenRequest(
     val code: String? = null,
     @SerialName("refresh_token") val refreshToken: String? = null,
     @SerialName("client_secret") val clientSecret: String? = null,
+    @SerialName("redirect_uri") val redirectUri: String? = null,
     val state: String? = null
 )
